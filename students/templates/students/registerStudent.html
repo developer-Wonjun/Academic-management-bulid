@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+    <p>Register student</p>
+
+    <form action="{% url 'students:regCon' %}" metod="post">
+    {% csrf_token %}  
+        name : <input type="text" name="name"><br>
+        major : <input type="text" name="major"><br>
+        age : <input type="text" name="age"><br>
+        grade : <input type="text" name="grade"><br>
+        gender : <input type="text" name="gender"><br>
+        <input type="submit" name="Register"><br>
+
+    </form>
+    
+</body>
+</html>
